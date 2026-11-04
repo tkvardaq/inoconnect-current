@@ -1,0 +1,173 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.1_fun_camera_v1.1_1.3B_bf16.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "young woman looks thoughtfully at glowing smartphone screen, gentle blinking, subtle ambient head movement, cinematic depth of field, natural motion"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "blurry, distorted, morphing, warping, flicker, jitter, text, watermark, extra objects appearing, static frozen frame"
+    }
+  },
+  "6": {
+    "class_type": "CLIPVisionLoader",
+    "inputs": {
+      "clip_name": "clip_vision_h.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "mcp_1793725277596.png"
+    }
+  },
+  "8": {
+    "class_type": "CLIPVisionEncode",
+    "inputs": {
+      "clip_vision": [
+        "6",
+        0
+      ],
+      "image": [
+        "7",
+        0
+      ],
+      "crop": "none"
+    }
+  },
+  "9": {
+    "class_type": "WanCameraEmbedding",
+    "inputs": {
+      "camera_pose": "Zoom In",
+      "width": 832,
+      "height": 512,
+      "length": 49
+    }
+  },
+  "10": {
+    "class_type": "WanCameraImageToVideo",
+    "inputs": {
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "width": 832,
+      "height": 512,
+      "length": 49,
+      "batch_size": 1,
+      "start_image": [
+        "7",
+        0
+      ],
+      "clip_vision_output": [
+        "8",
+        0
+      ],
+      "camera_conditions": [
+        "9",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift": 8.0
+    }
+  },
+  "12": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ],
+      "seed": 851579720658731,
+      "steps": 20,
+      "cfg": 6.0,
+      "sampler_name": "uni_pc",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "positive": [
+        "10",
+        0
+      ],
+      "negative": [
+        "10",
+        1
+      ],
+      "latent_image": [
+        "10",
+        2
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "SaveWEBM",
+    "inputs": {
+      "images": [
+        "13",
+        0
+      ],
+      "filename_prefix": "mcp_video",
+      "codec": "vp9",
+      "fps": 16.0,
+      "crf": 28.0
+    }
+  }
+}

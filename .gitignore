@@ -1,0 +1,17 @@
+node_modules/
+_deploy/
+.manus/
+.claude/
+.work/
+__pycache__/
+*.pyc
+.env
+.env.local
+
+# Video pipeline raw intermediates & temporary render dumps
+videos/*raw*
+videos/*backup*
+videos/*.pcm
+videos/*.wav
+videos/test_frames/
+videos/clip_previews/

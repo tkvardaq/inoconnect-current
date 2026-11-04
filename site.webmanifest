@@ -1,0 +1,21 @@
+{
+  "name": "InoConnect",
+  "short_name": "InoConnect",
+  "description": "Digital marketing agency specializing in SEO, PPC, web development, and AI automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4169E1",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

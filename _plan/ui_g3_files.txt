@@ -1,0 +1,13 @@
+industries/b2b/index.html
+industries/ecommerce/index.html
+industries/education/index.html
+industries/healthcare/index.html
+industries/professional-services/index.html
+industries/saas/index.html
+industries/startups/index.html
+industries/index.html
+tools/index.html
+tools/cro-simulator/index.html
+tools/email-revenue-simulator/index.html
+tools/ltv-calculator/index.html
+tools/roas-calculator/index.html

@@ -1,0 +1,32 @@
+FAIL No US ZIP / UK postcode in any text file [54] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+FAIL No postalCode key in any JSON-LD or HTML [1] e.g. contact/index.html
+FAIL No hard claims left (see plan Phase 4) [157] e.g. about/index.html :: /98\.4%/ | about/index.html :: /\$420M/ | about/index.html :: /\b4\.2x\b/ | about/index.html :: /HIPAA compliance/i | about/index.html :: /verified ROI/i
+FAIL No href="#" placeholders [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+FAIL No Tailwind CDN script [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+FAIL No hotlinked Unsplash images [47] e.g. blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html | blog/d2c-ecommerce-funnels/index.html
+FAIL No unprefixed grid-cols-3 (mobile overflow) [28] e.g. blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html | blog/d2c-ecommerce-funnels/index.html
+FAIL Every <img> has width+height [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+PASS Every <img> has alt
+FAIL Forms: name + label[for], no fake alert [15] e.g. contact/index.html no name | contact/index.html no label[for]: <input type="text" required placeholder= | contact/index.html no name | contact/index.html no label[for]: <input type="email" required placeholder | contact/index.html no name
+FAIL Tool sliders each have label[for] or aria-label [1] e.g. tools/roas-calculator/index.html
+FAIL SEO: title 15-70, desc 70-160, 1 H1, no heading skips, valid schema [129] e.g. about/index.html heading skip h2>h4 | about/index.html no Organization schema | blog/accessibility-growth-lever/index.html heading skip h2>h4 | blog/accessibility-growth-lever/index.html no BlogPosting | blog/accessibility-growth-lever/index.html no Organization schema
+FAIL Blog dates are not all identical [1] e.g. all 2024-04-10
+PASS Sitemap == page set
+FAIL No text-[9px|10px|11px] [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+PASS Light-bg accent text (text-[#44D7A8]/[#FF7518]) reviewed: count only info: 372 uses (allowed on dark bg only)
+FAIL Skip link present [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+FAIL reveal-on-scroll has noscript fallback [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+FAIL Mobile menu toggle has aria-expanded [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+FAIL Only approved mailboxes (info@, privacy@, legal@); growth@ retired [1] e.g. growth@inoconnect.com
+PASS Brand spelled "InoConnect" (not "Ino Connect") in visible text
+FAIL No Twitter/X links or share buttons [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+FAIL LinkedIn footer link is a real URL (no LINKEDIN_URL placeholder, no #) [53] e.g. about/index.html | blog/accessibility-growth-lever/index.html | blog/authority-assets-strategy/index.html | blog/b2b-enterprise-abm/index.html | blog/core-web-vitals-revenue/index.html
+PASS EST. 2021 kept on About
+FAIL Blog dates match the weekly table (datetime + visible) [75] e.g. technical-seo-audit datetime | technical-seo-audit visible date | technical-seo-audit old date left | programmatic-seo-saas datetime | programmatic-seo-saas visible date
+FAIL Old tool-leads.js removed; tool-capture.js on all 4 tools [5] e.g. tool-leads.js still exists | tools/cro-simulator/index.html | tools/email-revenue-simulator/index.html | tools/ltv-calculator/index.html | tools/roas-calculator/index.html
+FAIL Tools pages: no Client-Side / zero-capture claims [1] e.g. tools/index.html
+FAIL Contact form posts to Apps Script (contact-form.js present, endpoint set) [1] e.g. assets/contact-form.js missing
+FAIL BlogPosting datePublished equals the confirmed date (flag file present) [25] e.g. technical-seo-audit | programmatic-seo-saas | local-seo-domination | link-velocity-strategy | schema-markup-guide
+PASS No no-cors fetch in assets/*.js (it hides failures)
+
+6/30 checks passed
